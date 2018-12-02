@@ -11,16 +11,8 @@ set KMS_Sev=150.30.0.6
 cls
 echo VL版本系列windows和office激活脚本;
 echo 首先感谢vlmcsd的作者,其GitHub项目地址:https://github.com/Wind4/vlmcsd
-echo PC脚本作者:Mrxn;                                                   
-echo ======================================================
-echo m    m                             mm   m          m
-echo ##  ##  m mm  m   m  m mm          #"m  #  mmm   mm#mm
-echo # ## #  #"  "  #m#   #"  #         # #m # #"  #    #
-echo # "" #  #      m#m   #   #         #  # # #""""    #
-echo #    #  #     m" "m  #   #    #    #   ## "#mm"    "mm
-echo =======================================================                                                       
-
-
+echo PC脚本作者:Mrxn，刁;                                                   
+echo 正在检查与激活服务器的连接情况......请耐心等待;
 echo.
 ping 150.30.0.6 | find "超时"  > NUL &&  goto fail
 ping 150.30.0.6 | find "目标主机"  > NUL &&  goto fail
@@ -110,7 +102,7 @@ goto windowsstart
 for /f "tokens=3 delims= " %%i in ('reg QUERY "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v "EditionID"') do set EditionID=%%i
 if defined %EditionID% (
 	cscript //Nologo %windir%\system32\slmgr.vbs /ipk !%EditionID%!
-	cscript //Nologo %windir%\system32\slmgr.vbs /skms kms.mrxn.net
+	cscript //Nologo %windir%\system32\slmgr.vbs /skms 150.30.0.6
 	cscript //Nologo %windir%\system32\slmgr.vbs /ato
 ) else (
 	echo 找不到系列号，可能是旗舰版之类的系统……
@@ -137,7 +129,7 @@ if DEFINED _Office%1Path (
     cd /d "!_Office%1Path!"
     if %1 EQU 16 call :Licens16
     echo.&echo 尝试激活 %2 ...&echo.
-    cscript //nologo ospp.vbs /sethst:kms.mrxn.net >nul
+    cscript //nologo ospp.vbs /sethst:150.30.0.6 >nul
     cscript //nologo ospp.vbs /act | find /i "successful" && (
         echo.&echo ***** %2 激活成功 ***** & echo.) || (echo.&echo ***** %2 激活失败 ***** & echo.)
 )    

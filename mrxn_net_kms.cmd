@@ -1,5 +1,5 @@
 chcp 936
-@echo off&PUSHD  &TITLE Mrxn_Blog_KMS¼¤»î¹¤¾ß
+@echo off&PUSHD  &TITLE KMSæ¿€æ´»å·¥å…·
 mode con cols=75 lines=25
 setlocal EnableDelayedExpansion&color 70 & cd /d "%~dp0"
 %1 %2
@@ -7,11 +7,11 @@ ver|find "5.">nul&&goto :start
 mshta vbscript:createobject("shell.application").shellexecute("%~s0","goto :start","","runas",1)(window.close)&goto :eof
 
 :start
-set KMS_Sev=kms.mrxn.net
+set KMS_Sev=150.30.0.6
 cls
-echo VL°æ±¾ÏµÁÐwindowsºÍoffice¼¤»î½Å±¾;
-echo Ê×ÏÈ¸ÐÐ»vlmcsdµÄ×÷Õß,ÆäGitHubÏîÄ¿µØÖ·:https://github.com/Wind4/vlmcsd
-echo PC½Å±¾×÷Õß:Mrxn;                                                   
+echo VLç‰ˆæœ¬ç³»åˆ—windowså’Œofficeæ¿€æ´»è„šæœ¬;
+echo é¦–å…ˆæ„Ÿè°¢vlmcsdçš„ä½œè€…,å…¶GitHubé¡¹ç›®åœ°å€:https://github.com/Wind4/vlmcsd
+echo PCè„šæœ¬ä½œè€…:Mrxn;                                                   
 echo ======================================================
 echo m    m                             mm   m          m
 echo ##  ##  m mm  m   m  m mm          #"m  #  mmm   mm#mm
@@ -20,24 +20,21 @@ echo # "" #  #      m#m   #   #         #  # # #""""    #
 echo #    #  #     m" "m  #   #    #    #   ## "#mm"    "mm
 echo =======================================================                                                       
 
-echo ÎÒµÄ¸öÈË²©¿Í:https://mrxn.net/;
-echo kms·þÎñÆ÷µØÖ·:kms.mrxn.net,·½±ãÏ²»¶ÊÖ¶¯¼¤»îµÄÅóÓÑ;
-echo ÓÐÎÊÌâÇë·´À¡ÔÚÎÒµÄ²©¿ÍÁôÑÔ£¬»òÕß·¢ËÍÖÁÎÒµÄÓÊÏä:admin@mrxn.net;
-echo ÕýÔÚ¼ì²éÓë¼¤»î·þÎñÆ÷µÄÁ¬½ÓÇé¿ö......ÇëÄÍÐÄµÈ´ý;
+
 echo.
-ping kms.mrxn.net | find "³¬Ê±"  > NUL &&  goto fail
-ping kms.mrxn.net | find "Ä¿±êÖ÷»ú"  > NUL &&  goto fail
-echo ³É¹¦Á¬½ÓÉÏ·þÎñÆ÷¡­¡­
+ping 150.30.0.6 | find "è¶…æ—¶"  > NUL &&  goto fail
+ping 150.30.0.6 | find "ç›®æ ‡ä¸»æœº"  > NUL &&  goto fail
+echo æˆåŠŸè¿žæŽ¥ä¸ŠæœåŠ¡å™¨â€¦â€¦
 ver | find "6.0." > NUL &&  goto winvista
 ver | find "6.1." > NUL &&  goto win7
 ver | find "6.2." > NUL &&  goto win8
 ver | find "6.3." > NUL &&  goto win81
 ver | find "10.0." > NUL &&  goto win10
-echo Î´ÕÒµ½ºÏÊÊµÄNT6ÏµÍ³£¬¿ÉÄÜÊÇWinXP»òWin2003¡£
+echo æœªæ‰¾åˆ°åˆé€‚çš„NT6ç³»ç»Ÿï¼Œå¯èƒ½æ˜¯WinXPæˆ–Win2003ã€‚
 goto office
 
 :winvista
-echo µ±Ç°ÎªWindows Vista/2008¡£
+echo å½“å‰ä¸ºWindows Vista/2008ã€‚
 set Business=YFKBB-PQJJV-G996G-VWGXY-2V3X8
 set BusinessN=HMBQG-8H2RH-C77VX-27R82-VMQBT
 set Enterprise=VKK3X-68KWM-X2YGT-QR4M6-4BWMV
@@ -54,7 +51,7 @@ set ServerEnterpriseIA64=4DWFP-JF3DJ-B7DTH-78FJB-PDRHK
 goto windowsstart
 
 :win7
-echo µ±Ç°ÎªWindows 7/2008 R2¡£
+echo å½“å‰ä¸ºWindows 7/2008 R2ã€‚
 set Professional=FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4
 set ProfessionalN=MRPKT-YTG23-K7D7T-X2JMM-QY7MG
 set ProfessionalE=W82YF-2Q76Y-63HXB-FGJG9-GF7QX
@@ -69,7 +66,7 @@ set ServerDatacenter=74YFP-3QFB3-KQT8W-PMXWJ-7M648
 set ServerEnterpriseIA64=GT63C-RJFQ3-4GMB6-BRFB9-CB83V
 goto windowsstart
 :win8
-echo µ±Ç°ÎªWindows 8/2012¡£
+echo å½“å‰ä¸ºWindows 8/2012ã€‚
 set Professional=NG4HW-VH26C-733KW-K6F98-J8CK4
 set ProfessionalN=XCVCF-2NXM9-723PB-MHCB7-2RYQQ
 set Core=BN3D2-R7TKB-3YPBD-8DRP2-27GG4
@@ -85,7 +82,7 @@ set ServerDatacenter=48HP8-DN98B-MYWDG-T2DCC-8W83P
 
 goto windowsstart
 :win81
-echo µ±Ç°ÎªWindows 8.1¡£
+echo å½“å‰ä¸ºWindows 8.1ã€‚
 set Professional=GCRJD-8NW9H-F2CDX-CCM8D-9D6T9
 set ProfessionalN=HMCNV-VVBFX-7HMBH-CTY9B-B4FXY
 set Enterprise=MHF9N-XY6XB-WVXMC-BTDCT-MKKG7
@@ -95,7 +92,7 @@ set ServerStandard=D2N9P-3P6X9-2R39C-7RTCD-MDVJX
 set ServerDatacenter=W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9
 goto windowsstart
 :win10
-echo µ±Ç°ÎªWindows 10¡£
+echo å½“å‰ä¸ºWindows 10ã€‚
 set Core=TX9XD-98N7V-6WMQ6-BX7FG-H8Q99
 set CoreCountrySpecific=PVMJN-6DFY6-9CCP6-7BKTT-D3WVR
 set CoreN=3KHY7-WNT83-DGQKR-F7HPR-844BM
@@ -116,20 +113,20 @@ if defined %EditionID% (
 	cscript //Nologo %windir%\system32\slmgr.vbs /skms kms.mrxn.net
 	cscript //Nologo %windir%\system32\slmgr.vbs /ato
 ) else (
-	echo ÕÒ²»µ½ÏµÁÐºÅ£¬¿ÉÄÜÊÇÆì½¢°æÖ®ÀàµÄÏµÍ³¡­¡­
+	echo æ‰¾ä¸åˆ°ç³»åˆ—å·ï¼Œå¯èƒ½æ˜¯æ——èˆ°ç‰ˆä¹‹ç±»çš„ç³»ç»Ÿâ€¦â€¦
 )
 goto office
 :office
-echo ¼ì²é°²×°µÄoffice¡­¡­
+echo æ£€æŸ¥å®‰è£…çš„officeâ€¦â€¦
 call :GetOfficePath 14 Office2010
 call :ActOffice 14 Office2010
 call :GetOfficePath 15 Office2013
 call :ActOffice 15 Office2013
 if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" set _Office16Path=%ProgramFiles%\Microsoft Office\Office16
 if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" set _Office16Path=%ProgramFiles(x86)%\Microsoft Office\Office16
-if DEFINED _Office16Path (echo.&echo ÒÑ·¢ÏÖ Office2016
+if DEFINED _Office16Path (echo.&echo å·²å‘çŽ° Office2016
     call :ActOffice 16 Office2016
-  ) else (echo.&echo Î´·¢ÏÖ Office2016)
+  ) else (echo.&echo æœªå‘çŽ° Office2016)
 
 
 echo.&pause
@@ -139,16 +136,16 @@ exit
 if DEFINED _Office%1Path (
     cd /d "!_Office%1Path!"
     if %1 EQU 16 call :Licens16
-    echo.&echo ³¢ÊÔ¼¤»î %2 ...&echo.
+    echo.&echo å°è¯•æ¿€æ´» %2 ...&echo.
     cscript //nologo ospp.vbs /sethst:kms.mrxn.net >nul
     cscript //nologo ospp.vbs /act | find /i "successful" && (
-        echo.&echo ***** %2 ¼¤»î³É¹¦ ***** & echo.) || (echo.&echo ***** %2 ¼¤»îÊ§°Ü ***** & echo.)
+        echo.&echo ***** %2 æ¿€æ´»æˆåŠŸ ***** & echo.) || (echo.&echo ***** %2 æ¿€æ´»å¤±è´¥ ***** & echo.)
 )    
 cd /d "%~dp0"
 goto :EOF
 
 :GetOfficePath
-echo.&echo ÕýÔÚ¼ì²â %2 ÏµÁÐ²úÆ·µÄ°²×°Â·¾¶...
+echo.&echo æ­£åœ¨æ£€æµ‹ %2 ç³»åˆ—äº§å“çš„å®‰è£…è·¯å¾„...
 set _Office%1Path=
 set _Reg32=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\%1.0\Common\InstallRoot
 set _Reg64=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\%1.0\Common\InstallRoot
@@ -158,7 +155,7 @@ if DEFINED _OfficePath1 (if exist "%_OfficePath1%ospp.vbs" set _Office%1Path=!_O
 if DEFINED _OfficePath2 (if exist "%_OfficePath2%ospp.vbs" set _Office%1Path=!_OfficePath2!)
 set _OfficePath1=
 set _OfficePath2=
-if DEFINED _Office%1Path (echo.&echo ÒÑ·¢ÏÖ %2) else (echo.&echo Î´·¢ÏÖ %2)
+if DEFINED _Office%1Path (echo.&echo å·²å‘çŽ° %2) else (echo.&echo æœªå‘çŽ° %2)
 goto :EOF
 
 :Licens16
@@ -181,5 +178,5 @@ goto :EOF
 exit
 :fail
 cls
-echo ÎÞ·¨Á¬½Óµ½·þÎñÆ÷¡­¡­
+echo æ— æ³•è¿žæŽ¥åˆ°æœåŠ¡å™¨â€¦â€¦
 pause
